@@ -18,7 +18,7 @@ Function.prototype.myCall = function (context) {
   } 
   console.log('come')
   // console.log(args.join(','))
-  // 拼接的是字符串
+  // 拼接的是字符串， 这样是不行滴
   // var result = context.fn(args.join(','));
   // eval 接收字符串作为参数，并将其当作 JS 代码进行执行。
   var result = eval('context.fn(' + args + ')');

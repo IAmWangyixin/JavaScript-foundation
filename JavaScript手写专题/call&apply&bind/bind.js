@@ -27,7 +27,6 @@ function bar(name, age) {
   console.log(this.value);
   console.log(name);
   console.log(age);
-
 }
 
 var bindFoo = bar.myBind(foo, 'daisy');
