@@ -9,6 +9,8 @@ function all(iterator) {
       Promise.resolve(item)
         .then(data => {
           if (anErrorOccurred) return;
+          console.log(count, elementCount, currentIndex);
+          
           result[currentIndex] = data;
           elementCount++;
           if (elementCount === iterator.length) {
@@ -33,8 +35,16 @@ function all(iterator) {
   new Promise(
   (resolve) => setTimeout(
     () => resolve(1),
-  1000)), 2, 3]) 
-*/
+  800)), 
+  new Promise(
+  (resolve) => setTimeout(
+    () => resolve(2),
+  2000)),
+  new Promise(
+  (resolve) => setTimeout(
+    () => resolve(3),
+  1200))]) 
+ */
 
 function race(iterator) {
   let occurred = false;

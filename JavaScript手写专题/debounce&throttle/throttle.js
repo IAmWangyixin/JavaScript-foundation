@@ -19,7 +19,7 @@ function throttle(func, wait, options) {
     context = args = null;
   }
 
-  const throttle = function () {
+  const throttled = function () {
     context = this;
     args = arguments;
     const now = getNowTimeStamp();
@@ -42,7 +42,7 @@ function throttle(func, wait, options) {
     }
   }
 
-  return throttle;
+  return throttled;
 }
 
 // 结束后再执行一次
@@ -85,7 +85,7 @@ function throttle(func, wait, options) {
 //     fn.apply(context, args);
 //   }
 
-//   const throttle = function () {
+//   const throttled = function () {
 //     context = this;
 //     args = arguments;
 //     let now = getNowTimeStamp();
@@ -103,5 +103,5 @@ function throttle(func, wait, options) {
 //     }
 //   }
 
-//   return throttle;
+//   return throttled;
 // }
